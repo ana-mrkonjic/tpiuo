@@ -36,6 +36,7 @@ async def send_to_event_hub(posts):
         event_data_batch.add(EventData(str(posts)))
         await producer.send_batch(event_data_batch)
         print("Initial posts sent to Event Hub")
+        print("Success")
 
 async def main():
     initial_posts = await fetch_initial_posts()
