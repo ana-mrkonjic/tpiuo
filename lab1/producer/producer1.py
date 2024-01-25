@@ -8,9 +8,9 @@ EVENT_HUB_NAME = "vjestina-hub"
 EVENT_HUB_CONNECTION_STR = "Endpoint=sb://mycluster.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=uarjTpZEEbzNLRHxfIjSq/AxWy7DDFfPI+AEhDy3hZ8="
 reddit_url = "https://www.reddit.com/r/dataengineering/top.json?limit=10"
 
-async def fetch_initial_posts(retries=5, backoff=1):
+async def fetch_initial_posts(retries=5, backoff=1, timeout=5):
     for _ in range(retries):
-        response = requests.get(reddit_url)
+        response = requests.get(reddit_url, timeout=timeout)
         if response.status_code == 200:
             return response.json()
         elif response.status_code == 429:
