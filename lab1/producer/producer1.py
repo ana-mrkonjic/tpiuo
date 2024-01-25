@@ -5,9 +5,7 @@ from azure.eventhub.aio import EventHubProducerClient
 
 # Azure Event Hub connection parameters
 EVENT_HUB_NAME = "vjestina-hub"
-EVENT_HUB_CONNECTION_STR = "Endpoint=sb://mycluster.servicebus.windows.net/;"
-+"SharedAccessKeyName=RootManageSharedAccessKey;"
-+"SharedAccessKey=uarjTpZEEbzNLRHxfIjSq/AxWy7DDFfPI+AEhDy3hZ8="
+EVENT_HUB_CONNECTION_STR = "Endpoint=sb://mycluster.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=uarjTpZEEbzNLRHxfIjSq/AxWy7DDFfPI+AEhDy3hZ8="
 REDDIT_URL = "https://www.reddit.com/r/dataengineering/top.json?limit=10"
 
 async def fetch_initial_posts(retries=5, backoff=1, timeout=5):
