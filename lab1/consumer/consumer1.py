@@ -25,7 +25,6 @@ async def on_event(partition_context, event):
     body = event.body_as_str(encoding="UTF-8")
     
     if body:
-        print("Success")
         print(body)
         # try:
         #     json_data = json.loads(body)
