@@ -10,7 +10,7 @@ REDDIT_URL = "https://www.reddit.com/r/dataengineering/top.json?limit=10"
 
 async def fetch_initial_posts(retries=5, backoff=1, timeout=5):
     """
-    Fetch initial posts from Redditt.
+    Fetch initial posts from Reddit.
 
     Parameters:
         retries (int): Number of retries in case of failure.

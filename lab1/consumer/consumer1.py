@@ -33,7 +33,7 @@ async def on_event(partition_context, event):
         # except json.JSONDecodeError as e:
         #     print(f"Failed to parse JSON: {e}")
     else:
-        print("Empty event body receivedd.")
+        print("Empty event body received.")
 
     # Update the checkpoint.
     await partition_context.update_checkpoint(event)
