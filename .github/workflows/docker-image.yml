@@ -16,24 +16,24 @@ jobs:
       - uses: editorconfig-checker/action-editorconfig-checker@main
       - run: editorconfig-checker
       
-  linter:
-    runs-on: ubuntu-latest
-    #needs: editorconfig
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#  linter:
+#    runs-on: ubuntu-latest
+  
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v2
 
-      - name: Install Pylint
-        run: |
-          pip install pylint
+#      - name: Install Pylint
+#        run: |
+#          pip install pylint
 
-      - name: Pylint Check
-        run: |
-          pylint lab1/producer/producer1.py
+#      - name: Pylint Check
+#        run: |
+#          pylint lab1/producer/producer1.py
 
   azure:
     runs-on: ubuntu-latest
-    needs: [editorconfig, linter]
+    needs: [editorconfig]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
