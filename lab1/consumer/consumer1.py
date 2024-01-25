@@ -26,6 +26,7 @@ async def on_event(partition_context, event):
     
     if body:
         print(body)
+        print("Success") 
         # try:
         #     json_data = json.loads(body)
         #     print("Received JSON data:", json_data)
